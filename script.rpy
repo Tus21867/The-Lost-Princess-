@@ -21,7 +21,7 @@ image frowning king angelo:
     zoom 1.0
 
 image smiling king angelo:
-    "the king smiling.png"
+    "the king smiling.jpeg"
     zoom 1.0
 
 image annoyed prince:
@@ -33,7 +33,7 @@ image frowning prince:
     zoom 1.0
 
 image smiling prince:
-    "the prince grinning.png"
+    "the prince talking.jpeg"
     zoom 1.0
 
 image ghost child frowning:
@@ -45,7 +45,7 @@ image ghost child talking:
     zoom 1.0
 
 image glitch child frowning:
-    "frowning glitch.png"
+    "frowning glitch.jpeg"
     zoom 1.0
 
 image glitch child talking:
@@ -127,15 +127,37 @@ label start:
     r"help me pull boy! whatever this is isnt light"
     y"'is this the end? its suffocating ..'"
     r"its a human..boy start the engine turn the sails..the king won't be happy about this.."
-    y"'the..king?..' my mind goes blank as the siren calls of fatige and slumber call me..it doesnt hurt anymore.."
+    y"'the..king?..' my mind goes blank as the siren calls of fatigu and slumber call me..it doesnt hurt anymore.."
 
     
 
-    a"how did this..thing get across the boarder? a boarder mde by the gods no less "
+    a"how did this..thing get across the boarder? a boarder made by the gods no less "
     p"i dont know father.. the sea merchaints found it floating in the water.. barely alive.."
     y"'who is that?..where am I? those voices..they sound so distant..so deep almost demonic..'"
-    y"'father?..a father and son? is that who is by my bedside? i can feel their precense but they dont sound too friendly they seem angry that im here..'"
+    y"'father?..a father and son? is that who is by my bedside? i can feel their presence but they dont sound too friendly they seem angry that im here..'"
     y"'the older sounding one..what is he ranting on about? a boarder? gods? this has to be a joke..'"
+
+    y"im tired..so tired..a few more minutes wouldnt hurt"
+    g"hehe...hahHAHAHA"
+    y"gGAH! what the hell?!"
+    show glitch child talking
+    y"who the hell are you?!"
+    g"wait you can see me?"
+    y"see you? yeah i can see you who the hell are you? what are you?!..whats your name?"
+    show glitch child frowning
+    g"my name?..my name is..is...i dont remember..its been..years since ive said my name.."
+    y"'poor thing..it sounds like a boy? maybe around eight years old?his face is unclear but his energy is refreshing it brings me a nice warmth in this cold enviornment im in..'"
+    y"hey..its okay ..Im Y/N we'll figure your name out together okay?"
+    show glitch child talking
+    g"Y/n?..thats nice..thank you Y/n.."
+    y"anytime kid..do you know where we are?"
+    show glitch child frowning 
+    g"in a castle..a place of blood and war.."
+    y"w-what?.."
+    g"its time to wake up Y/N they are coming for you.."
+    y"wh-what? who is coming for me?"
+    g"goodbye Y/N ill see you again soon.."
+    y"Wait! don't go! please!"
     scene bg bedroom
     with fade
     y" as my eyes adjust to the dim light of the room i can make out two figures standing over me.. one older with a stern look on his face and the other younger looking more curious than anything else.. but both faces are almost filled with..disgust?"
@@ -152,28 +174,40 @@ label start:
     menu:
         a"how did you get here little mortal?"
         "where am i?":
-            jump where am i 
+            jump where_am_i
+        "remain silent":
+            jump remain_silent
+    return
+    label where_am_i:
             y"where am i?"
+        
             a"a place you shouldnt be tell me mere mortal how did something as tiny as you get here?"
             y"mortal?..is that some sort of joke? why are you grey?! where is my boat?!"
             p"so you got here by boat? thats a first.."
-         return
     
-    "remain silent":
-            jump silent
+    jump after_choice   
+    
+    
+    
+    label remain_silent:
             y" ..."
-            show annoyed king angelo at right
-            show grinning prince at left
             a"tch I asked you a question you little meat bag is that mouth of yours no longer working?"
             p"im sure we can make use of its bones father especially those of the teeth a mute wont need them"
             y"'teeth? these creeps are crazy! i need to get out of here and fast..'"
-          return
+    jump after_choice
 label after_choice:
         y"Y/N..my name is Y/N..where am I? who are you guys?"
         a"Y/N? what kind of name is that? you are in our kingdom a place no mortal should have access to and yet here you are.."
         p"I am prince carlos and this is my father king Angelo we are the rulers of this land of monsters.."
         y"'monsters? is this some kind of joke? monsters arent real..'"
         a"careful now mortal staring at royalty like that is considered rather rude here"
-    #show ghost child sad 
+        y"rude? you guys are the ones being rude I know nothing about where i am about who you guys are or what you want from me!"
+        y"'i watch the two shuffle around the room the one with the blindfold seemed less angry though he seemed unimpressed while his father seemed rather annoyed by my commentary..'"
+        show annoyed king angelo 
+        show frowning prince at right
+        a"tch this one has quite the mouth on it.."
+        p"its just afraid father i think we need to be careful with it or else it might fall dead like a rabbit.."
+        y"'a rabbit?..are these guys seriously comparing me to a rabbit? these guys clearly arent human and they arent even right in the head..I need to get out of here before they make up their minds up.."
     
-    return
+    
+return
